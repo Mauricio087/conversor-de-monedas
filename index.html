@@ -1,35 +1,48 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Conversor de Monedas</title>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <link rel="stylesheet" href="assets/css/style.css" />
-  </head>
-  <body>
-    <div class="container">
-      <hr>
-      <h1>Conversor de Monedas Nacional</h1>
-      <hr>
-      <div class="card">
-        <div class="form-group">
-          <label for="amount">Pesos CLP:</label>
-          <input type="number" id="amount" placeholder="Ingrese el monto" />
-        </div>
-        <div class="form-group">
-          <label for="currency">Moneda a Convertir:</label>
-          <select id="currency">
-            <option value="dolar">Dólar</option>
-            <option value="euro">Euro</option>
-          </select>
-        </div>
-        <button id="convert">Convertir</button>
-        <div id="result"></div>
-        <div id="error"></div>
-        <canvas id="chart" width="400" height="200"></canvas>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conversor de Monedas</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+  <div class="container mt-5">
+    <hr>
+    <h1 class="text-center mb-4">Conversor de Monedas</h1>
+    <hr>
+
+    <div class="card">
+      <div class="mb-2">
+        <p for="input-monto" class="form-label">Pesos CLP:</p>
+        <input type="number" id="input-monto" class="form-control" placeholder="Ingrese monto en CLP">
+      </div>
+
+      <div class="mb-2">
+        <p for="select-moneda" class="form-label">Moneda a convertir:</p>
+        <select id="select-moneda" class="form-select">
+          <option value="" disabled selected>Seleccione una moneda</option>
+          <option value="dolar">Dólar</option>
+          <option value="euro">Euro</option>
+        </select>
+      </div>
+
+      <button id="btn-convertir" class="btn btn-primary w-100">Convertir</button>
+
+      <div class="mt-4">
+        <h3>Resultado:</h3>
+        <p id="resultado" class="alert alert-info">Ingrese los datos y presione convertir para ver el resultado.</p>
+      </div>
+
+      <div class="mt-4">
+        <h3>Historial de valores:</h3>
+        <canvas id="grafico-historial"></canvas>
       </div>
     </div>
-    <script src="assets/js/script.js"></script>
-  </body>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
 </html>

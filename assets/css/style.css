@@ -4,7 +4,11 @@ body {
     padding: 0;
     background-color: #f4f4f4;
   }
-  h1 {
+
+  hr {color: #f4f4f4;
+  }
+
+  h1, h3 {
     text-align: center;
     color: white;
   }
@@ -23,24 +27,12 @@ body {
     margin-left: 80px;
     border-radius: 8px;
   }
-  .form-group {
+  .form-label {
     margin-top: 20px;
-    margin-bottom: 15px;
     color: white;
     text-align: center;
   }
-  .form-group label {
-    display: block;
-    margin-bottom: 5px;
-  }
-  .form-group input,
-  .form-group select {
-    text-align: center;
-    width: 70%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
+
   button {
     background-color: #00e1ff;
     color: white;
@@ -48,22 +40,19 @@ body {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin-left: 150px;
+    margin-left: 1px;
   }
   button:hover {
     background-color: #049dda;
   }
-  #result {
+  #resultado {
     margin-top: 20px;
     font-size: 1.2em;
     text-align: center;
   }
   canvas {
     margin-top: 20px;
+    margin-left: 15px;
     background-color: #f4f4f4;
   }
-  #error {
-    color: red;
-    font-weight: bold;
-    text-align: center;
-  }
+
